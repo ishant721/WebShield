@@ -1,0 +1,4 @@
+[ 2025-01-14 13:32:46,631 ] 30 root - INFO - MongoDB client initialized successfully.
+[ 2025-01-14 13:32:46,631 ] 39 root - INFO - Reading CSV file from path: Network_Data/phisingData.csv
+[ 2025-01-14 13:32:46,731 ] 43 root - INFO - Successfully converted CSV to JSON records: 11055 records found.
+[ 2025-01-14 13:32:46,731 ] 56 root - INFO - Inserting data into MongoDB: Database=Ishant, Collection=WebData
