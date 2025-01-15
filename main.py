@@ -1,8 +1,9 @@
 from websecurity.components.data_ingestion import DataIngestion
 from websecurity.components.data_validation import DataValidation
+from websecurity.components.data_transformation import DataTransformation
 from websecurity.exception.exception import WebShieldException
 from websecurity.logging.logger import logging
-from websecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig 
+from websecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig ,DataTransformationConfig
 from websecurity.entity.config_entity import TrainingPipelineConfig
 import sys
 
@@ -20,5 +21,11 @@ if __name__=="__main__":
        data_validation_artifact=data_validation.initiate_data_validation()
        logging.info("Data Validation completed")
        print(data_validation_artifact)
+       data_transformation_config=DataTransformationConfig(trainingpipelineconfig)
+       logging.info("Data Tranformation started")
+       data_tranformation=DataTransformation(data_validation_artifact,data_transformation_config)
+       data_tranformation_artifact=data_tranformation.initiate_data_transformation()
+       logging.info("Data Tranformation completed")
+       print(data_tranformation_artifact)
     except Exception as e:
         raise WebShieldException(e,sys)
