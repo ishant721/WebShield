@@ -2,8 +2,9 @@ from websecurity.components.data_ingestion import DataIngestion
 from websecurity.components.data_validation import DataValidation
 from websecurity.components.data_transformation import DataTransformation
 from websecurity.exception.exception import WebShieldException
+from websecurity.components.model_trainer import ModelTrainer
 from websecurity.logging.logger import logging
-from websecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig ,DataTransformationConfig
+from websecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig ,DataTransformationConfig,ModelTrainerConfig
 from websecurity.entity.config_entity import TrainingPipelineConfig
 import sys
 
@@ -24,8 +25,14 @@ if __name__=="__main__":
        data_transformation_config=DataTransformationConfig(trainingpipelineconfig)
        logging.info("Data Tranformation started")
        data_tranformation=DataTransformation(data_validation_artifact,data_transformation_config)
-       data_tranformation_artifact=data_tranformation.initiate_data_transformation()
+       data_transformation_artifact=data_tranformation.initiate_data_transformation()
        logging.info("Data Tranformation completed")
-       print(data_tranformation_artifact)
+       print(data_transformation_artifact)
+       logging.info("Model Training stared")
+       model_trainer_config=ModelTrainerConfig(trainingpipelineconfig)
+       model_trainer=ModelTrainer(model_trainer_config=model_trainer_config,
+                                  data_transformation_artifact=data_transformation_artifact)
+       model_trainer_artifact=model_trainer.initiate_model_trainer()
+       logging.info("Model Training artifact created")
     except Exception as e:
         raise WebShieldException(e,sys)

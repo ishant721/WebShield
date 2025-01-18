@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ishantsingh/data_science/Web%20Shield/mlruns/0/efaaa07513f846eba1b10cf33f6a604a/artifacts
+end_time: 1737201267959
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: efaaa07513f846eba1b10cf33f6a604a
+run_name: auspicious-roo-944
+run_uuid: efaaa07513f846eba1b10cf33f6a604a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737201266434
+status: 3
+tags: []
+user_id: ishantsingh

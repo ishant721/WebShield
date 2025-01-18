@@ -1,0 +1,16 @@
+aliases: []
+creation_timestamp: 1737201267955
+current_stage: None
+description: null
+last_updated_timestamp: 1737201267955
+name: Random Forest_test
+run_id: efaaa07513f846eba1b10cf33f6a604a
+run_link: null
+source: file:///Users/ishantsingh/data_science/Web%20Shield/mlruns/0/efaaa07513f846eba1b10cf33f6a604a/artifacts/Random
+  Forest
+status: READY
+status_message: null
+storage_location: file:///Users/ishantsingh/data_science/Web%20Shield/mlruns/0/efaaa07513f846eba1b10cf33f6a604a/artifacts/Random
+  Forest
+user_id: null
+version: 1

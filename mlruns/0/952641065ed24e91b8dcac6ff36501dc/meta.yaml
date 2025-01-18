@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ishantsingh/data_science/Web%20Shield/mlruns/0/952641065ed24e91b8dcac6ff36501dc/artifacts
+end_time: 1737201266331
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 952641065ed24e91b8dcac6ff36501dc
+run_name: stylish-shad-785
+run_uuid: 952641065ed24e91b8dcac6ff36501dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737201263587
+status: 3
+tags: []
+user_id: ishantsingh
